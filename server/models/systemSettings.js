@@ -38,6 +38,7 @@ const SystemSettings = {
     "feature_flags",
     "meta_page_title",
     "meta_page_favicon",
+    "allow_user_registration",
   ],
   supportedFields: [
     "logo_filename",
@@ -63,6 +64,7 @@ const SystemSettings = {
 
     // Hub settings
     "hub_api_key",
+    "allow_user_registration",
   ],
   validations: {
     footer_data: (updates) => {
@@ -204,6 +206,10 @@ const SystemSettings = {
       if (prompt.trim() === SystemSettings.saneDefaultSystemPrompt)
         return SystemSettings.saneDefaultSystemPrompt;
       return String(prompt.trim());
+    },
+    allow_user_registration: (update) => {
+      if (typeof update === "boolean") return update === true ? "true" : "false";
+      return update === "true" ? "true" : "false";
     },
   },
   currentSettings: async function () {

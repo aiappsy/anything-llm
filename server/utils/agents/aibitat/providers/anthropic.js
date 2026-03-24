@@ -4,7 +4,7 @@ const { RetryError } = require("../error.js");
 const Provider = require("./ai-provider.js");
 const { v4 } = require("uuid");
 const { safeJsonParse } = require("../../../http");
-const { getAnythingLLMUserAgent } = require("../../../../endpoints/utils");
+const { getAiAppsy LLMUserAgent } = require("../../../../endpoints/utils");
 
 /**
  * The agent provider for the Anthropic API.
@@ -20,7 +20,7 @@ class AnthropicProvider extends Provider {
         apiKey: process.env.ANTHROPIC_API_KEY,
         maxRetries: 3,
         defaultHeaders: {
-          "User-Agent": getAnythingLLMUserAgent(),
+          "User-Agent": getAiAppsy LLMUserAgent(),
         },
       },
       model = "claude-3-5-sonnet-20240620",

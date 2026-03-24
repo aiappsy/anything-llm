@@ -68,7 +68,7 @@ async function getDiskStorage() {
  * Returns the model tag based on the provider set in the environment.
  * This information is used to identify the parent model for the system
  * so that we can prioritize the correct model and types for future updates
- * as well as build features in AnythingLLM directly for a specific model or capabilities.
+ * as well as build features in AiAppsy LLM directly for a specific model or capabilities.
  *
  * Disable with  {@link https://github.com/Mintplex-Labs/anything-llm?tab=readme-ov-file#telemetry--privacy|Disable Telemetry}
  * @returns {string} The model tag.
@@ -197,17 +197,17 @@ function getDeploymentVersion() {
 }
 
 /**
- * Returns the user agent for the AnythingLLM deployment.
+ * Returns the user agent for the AiAppsy LLM deployment.
  * @returns {string} The user agent.
  */
-function getAnythingLLMUserAgent() {
+function getAiAppsy LLMUserAgent() {
   const version = getDeploymentVersion() || "unknown";
-  return `AnythingLLM/${version}`;
+  return `AiAppsy LLM/${version}`;
 }
 
 module.exports = {
   utilEndpoints,
   getGitVersion,
   getModelTag,
-  getAnythingLLMUserAgent,
+  getAiAppsy LLMUserAgent,
 };

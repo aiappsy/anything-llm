@@ -1,0 +1,35 @@
+name: aiappsy-llm
+
+networks:
+  aiappsy-llm:
+    driver: bridge
+
+services:
+  aiappsy-llm:
+    container_name: aiappsy-llm
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        ARG_UID: ${UID:-1000}
+        ARG_GID: ${GID:-1000}
+    cap_add:
+      - SYS_ADMIN
+    volumes:
+      - "aiappsy_storage:/app/server/storage"
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - STORAGE_DIR=/app/server/storage
+    networks:
+      - aiappsy-llm
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
+
+volumes:
+  aiappsy_storage:
+    driver: local

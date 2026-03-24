@@ -135,7 +135,7 @@ const User = {
       });
       return { user: this.filterFields(user), error: null };
     } catch (error) {
-      console.error("FAILED TO CREATE USER.", error.message);
+      console.error("AiAppsy LLM: FAILED TO CREATE USER.", error.message);
       return { user: null, error: this._identifyErrorAndFormatMessage(error) };
     }
   },

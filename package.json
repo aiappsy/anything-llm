@@ -1,19 +1,19 @@
 {
-  "name": "anything-llm",
-  "version": "1.11.1",
-  "description": "The best solution for turning private documents into a chat bot using off-the-shelf tools and commercially viable AI technologies.",
+  "name": "aiappsy-llm",
+  "version": "1.0.0",
+  "description": "The professional AI system for turning private documents into a chat bot. Rebranded as AiAppsy LLM.",
   "main": "index.js",
   "type": "module",
   "author": "Timothy Carambat (Mintplex Labs)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mintplex-labs/anything-llm.git"
+    "url": "git+https://github.com/aiappsy/aiappsy-llm.git"
   },
   "bugs": {
-    "url": "https://github.com/mintplex-labs/anything-llm/issues"
+    "url": "https://github.com/aiappsy/aiappsy-llm/issues"
   },
-  "homepage": "https://github.com/mintplex-labs/anything-llm#readme",
+  "homepage": "https://github.com/aiappsy/aiappsy-llm#readme",
   "engines": {
     "node": ">=18"
   },
@@ -31,7 +31,7 @@
     "prisma:migrate": "cd server && npx prisma migrate dev --name init",
     "prisma:seed": "cd server && npx prisma db seed",
     "prisma:setup": "yarn prisma:generate && yarn prisma:migrate && yarn prisma:seed",
-    "prisma:reset": "truncate -s 0 server/storage/anythingllm.db && yarn prisma:migrate",
+    "prisma:reset": "truncate -s 0 server/storage/aiappsy.db && yarn prisma:migrate",
     "prod:server": "cd server && yarn start",
     "prod:frontend": "cd frontend && yarn build",
     "generate:cloudformation": "node cloud-deployments/aws/cloudformation/generate.mjs",
