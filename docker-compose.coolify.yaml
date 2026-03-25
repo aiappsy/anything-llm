@@ -19,8 +19,6 @@ services:
       - "aiappsy_storage:/app/server/storage"
     ports:
       - "3001:3001"
-    env_file:
-      - .env
     environment:
       - NODE_ENV=production
       - STORAGE_DIR=/app/server/storage

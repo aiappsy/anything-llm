@@ -4,26 +4,38 @@
 if [ -z "$STORAGE_DIR" ]; then
     echo "================================================================"
     echo "⚠️  ⚠️  ⚠️  WARNING: STORAGE_DIR environment variable is not set! ⚠️  ⚠️  ⚠️"
-    echo ""
-    echo "Not setting this will result in data loss on container restart since"
-    echo "the application will not have a persistent storage location."
-    echo "It can also result in weird errors in various parts of the application."
-    echo ""
-    echo "Please run the container with the official docker command at"
-    echo "https://docs.aiappsy.com/installation-docker/quickstart"
-    echo ""
-    echo "⚠️  ⚠️  ⚠️  WARNING: STORAGE_DIR environment variable is not set! ⚠️  ⚠️  ⚠️"
+    echo "Please set STORAGE_DIR=/app/server/storage for persistent data."
     echo "================================================================"
+else
+    echo "✅ STORAGE_DIR is set to $STORAGE_DIR"
 fi
 
-{
-  cd /app/server/ &&
-    # Disable Prisma CLI telemetry (https://www.prisma.io/docs/orm/tools/prisma-cli#how-to-opt-out-of-data-collection)
-    export CHECKPOINT_DISABLE=1 &&
-    npx prisma generate --schema=./prisma/schema.prisma &&
-    npx prisma migrate deploy --schema=./prisma/schema.prisma &&
-    node /app/server/index.js
-} &
-{ node /app/collector/index.js; } &
+# Ensure storage directory exists and is writable
+mkdir -p "$STORAGE_DIR"
+if [ ! -w "$STORAGE_DIR" ]; then
+    echo "❌ ERROR: STORAGE_DIR ($STORAGE_DIR) is not writable! Check volume permissions."
+    exit 1
+fi
+
+echo "🚀 Starting AiAppsy LLM services..."
+
+cd /app/server/
+echo "🛠️ Generating Prisma client..."
+export CHECKPOINT_DISABLE=1
+npx prisma generate --schema=./prisma/schema.prisma || { echo "❌ Prisma generate failed!"; exit 1; }
+
+echo "📦 Running database migrations..."
+npx prisma migrate deploy --schema=./prisma/schema.prisma || { echo "❌ Prisma migrate failed!"; exit 1; }
+
+echo "✅ Database is ready."
+
+# Start both services and log their output
+echo "🛰️ Starting Backend and Collector..."
+node /app/server/index.js &
+node /app/collector/index.js &
+
+# Wait for any process to exit
 wait -n
+
+# Exit with status of the one that failed
 exit $?
