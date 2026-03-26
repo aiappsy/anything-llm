@@ -31,7 +31,7 @@ eg: `postgresql://dbuser:dbuserpass@localhost:5432/yourdb`
 > If you have an existing table that you want to use as a vector database, AiAppsy LLM **requires** that the table be
 > at least minimally conform to the expected schema - this can be seen in the [index.js](./index.js) file.
 
-_optional_ - set a table name you wish to have AiAppsy LLM store vectors to. By default this is `AiAppsy LLM_vectors`
+_optional_ - set a table name you wish to have AiAppsy LLM store vectors to. By default this is `AIAPPSY_LLM_vectors`
 
 ## Common Questions
 

@@ -1048,7 +1048,7 @@ function requiresForceMode(_, forceModeEnabled = false) {
 }
 
 async function validDockerizedUrl(input = "") {
-  if (process.env.ANYTHING_LLM_RUNTIME !== "docker") return null;
+  if (process.env.AIAPPSY_LLM_RUNTIME !== "docker") return null;
 
   try {
     const { isPortInUse, getLocalHosts } = require("./portAvailabilityChecker");
@@ -1319,7 +1319,7 @@ function dumpENV() {
     "GENERIC_OPEN_AI_CUSTOM_HEADERS",
 
     // Specify Chromium args for collector
-    "AiAppsy LLM_CHROMIUM_ARGS",
+    "AIAPPSY_LLM_CHROMIUM_ARGS",
 
     // Allow setting a custom response timeout for Ollama
     "OLLAMA_RESPONSE_TIMEOUT",

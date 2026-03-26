@@ -42,11 +42,11 @@ class PGVector extends VectorDatabase {
 
   /**
    * Get the table name for the PGVector database.
-   * - Defaults to "AiAppsy LLM_vectors" if no table name is provided.
+   * - Defaults to "AIAPPSY_LLM_vectors" if no table name is provided.
    * @returns {string}
    */
   static tableName() {
-    return process.env.PGVECTOR_TABLE_NAME || "AiAppsy LLM_vectors";
+    return process.env.PGVECTOR_TABLE_NAME || "AIAPPSY_LLM_vectors";
   }
 
   /**

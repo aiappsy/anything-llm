@@ -28,7 +28,7 @@ class Milvus extends VectorDatabase {
   normalize(inputString) {
     let normalized = inputString.replace(/[^a-zA-Z0-9_]/g, "_");
     if (new RegExp(/^[a-zA-Z_]/).test(normalized.slice(0, 1)))
-      normalized = `AiAppsy LLM_${normalized}`;
+      normalized = `AIAPPSY_LLM_${normalized}`;
     return normalized;
   }
 
