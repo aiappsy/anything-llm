@@ -8,7 +8,7 @@ const TRANSLATIONS = {
     llm: {
       title: "LLM-i eelistus",
       description:
-        "AnythingLLM töötab paljude LLM-teenusepakkujatega. See teenus haldab vestlust.",
+        "AiAppsy LLM töötab paljude LLM-teenusepakkujatega. See teenus haldab vestlust.",
     },
     userSetup: {
       title: "Kasutaja seadistus",
@@ -34,15 +34,15 @@ const TRANSLATIONS = {
       settingsHint: "Neid sätteid saab igal ajal seadetes muuta.",
     },
     survey: {
-      title: "Tere tulemast AnythingLLM-i",
+      title: "Tere tulemast AiAppsy LLM-i",
       description:
-        "Aita meil AnythingLLM sinu vajadustele vastavaks kujundada. Valikuline.",
+        "Aita meil AiAppsy LLM sinu vajadustele vastavaks kujundada. Valikuline.",
       email: "Mis on su e-post?",
-      useCase: "Milleks kasutad AnythingLLM-i?",
+      useCase: "Milleks kasutad AiAppsy LLM-i?",
       useCaseWork: "Töö jaoks",
       useCasePersonal: "Isiklikuks kasutuseks",
       useCaseOther: "Muu",
-      comment: "Kust kuulsid AnythingLLM-ist?",
+      comment: "Kust kuulsid AiAppsy LLM-ist?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube jne – anna meile teada!",
       skip: "Jäta vahele",
@@ -97,7 +97,7 @@ const TRANSLATIONS = {
     "experimental-features": "Eksperimentaalsed funktsioonid",
     contact: "Tugi",
     "browser-extension": "Brauserilaiend",
-    "mobile-app": "AnythingLLM mobiilversioon",
+    "mobile-app": "AiAppsy LLM mobiilversioon",
     "community-hub": {
       title: "Kogukonna keskpunkt",
       trending: "Avasta populaarseid",
@@ -160,7 +160,7 @@ const TRANSLATIONS = {
       add: "Lisa uus sõnum",
       save: "Salvesta sõnumid",
       heading: "Selgita mulle",
-      body: "AnythingLLM eeliseid",
+      body: "AiAppsy LLM eeliseid",
     },
     delete: {
       title: "Kustuta tööruum",
@@ -355,7 +355,7 @@ const TRANSLATIONS = {
         title: "Nutikad oskuste valiku meetodid",
         "beta-badge": "Beeta",
         description:
-          "Lubage piiramatu hulga tööriistade kasutamist ning vähendage küsimuse kohta kasutatavate tokenide arv kuni 80% – AnythingLLM valib automaatselt iga küsimuse jaoks sobivad oskused.",
+          "Lubage piiramatu hulga tööriistade kasutamist ning vähendage küsimuse kohta kasutatavate tokenide arv kuni 80% – AiAppsy LLM valib automaatselt iga küsimuse jaoks sobivad oskused.",
         "max-tools": {
           title: "Max Tools",
           description:
@@ -381,11 +381,11 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "Kasutajaliidese eelistused",
-      description: "Sea AnythingLLM-i UI eelistused.",
+      description: "Sea AiAppsy LLM-i UI eelistused.",
     },
     branding: {
       title: "Bränding ja valgesildistamine",
-      description: "Valgesildista oma AnythingLLM kohandatud brändinguga.",
+      description: "Valgesildista oma AiAppsy LLM kohandatud brändinguga.",
     },
     chat: {
       title: "Vestlus",
@@ -425,7 +425,7 @@ const TRANSLATIONS = {
       "display-language": {
         title: "Kuvakeel",
         description:
-          "Vali keel, milles AnythingLLM UI kuvatakse (kui tõlge on olemas).",
+          "Vali keel, milles AiAppsy LLM UI kuvatakse (kui tõlge on olemas).",
       },
       logo: {
         title: "Brändi logo",
@@ -464,7 +464,7 @@ const TRANSLATIONS = {
   api: {
     title: "API võtmed",
     description:
-      "API võtmed võimaldavad programmipõhiselt hallata seda AnythingLLM instantsi.",
+      "API võtmed võimaldavad programmipõhiselt hallata seda AiAppsy LLM instantsi.",
     link: "Loe API dokumentatsiooni",
     generate: "Genereeri uus API võti",
     table: {
@@ -476,7 +476,7 @@ const TRANSLATIONS = {
   llm: {
     title: "LLM-i eelistus",
     description:
-      "Siin on sinu valitud LLM-teenusepakkuja võtmed ja seaded. Need peavad olema õiged, vastasel juhul AnythingLLM ei tööta.",
+      "Siin on sinu valitud LLM-teenusepakkuja võtmed ja seaded. Need peavad olema õiged, vastasel juhul AiAppsy LLM ei tööta.",
     provider: "LLM-pakkuja",
     providers: {
       azure_openai: {
@@ -508,7 +508,7 @@ const TRANSLATIONS = {
     "desc-start":
       "Kui kasutad LLM-i, mis ei sisalda embedding-mootorit, tuleb määrata täiendavad võtmed.",
     "desc-end":
-      "Embedding muudab teksti vektoriteks. Need võtmed on vajalikud, et AnythingLLM saaks sinu failid ja päringud töödelda.",
+      "Embedding muudab teksti vektoriteks. Need võtmed on vajalikud, et AiAppsy LLM saaks sinu failid ja päringud töödelda.",
     provider: {
       title: "Embedding-i pakkuja",
     },
@@ -531,7 +531,7 @@ const TRANSLATIONS = {
   vector: {
     title: "Vektoriandmebaas",
     description:
-      "Siin on seaded, kuidas AnythingLLM töötab. Vale seadistus võib põhjustada tõrkeid.",
+      "Siin on seaded, kuidas AiAppsy LLM töötab. Vale seadistus võib põhjustada tõrkeid.",
     provider: {
       title: "Vektoriandmebaasi pakkuja",
       description: "LanceDB puhul seadistust pole vaja.",
@@ -574,7 +574,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Privaatsus ja andmetöötlus",
     description:
-      "Konfiguratsioon kolmandate osapoolte ja AnythingLLM-i andmekäitluse kohta.",
+      "Konfiguratsioon kolmandate osapoolte ja AiAppsy LLM-i andmekäitluse kohta.",
     anonymous: "Anonüümne telemeetria lubatud",
   },
   connectors: {
@@ -988,7 +988,7 @@ const TRANSLATIONS = {
   telegram: {
     title: "Telegrami bot",
     description:
-      "Ühendage oma AnythingLLM instants Telegramiga, et saaksite vestleda oma tööruumidega igast seadmist.",
+      "Ühendage oma AiAppsy LLM instants Telegramiga, et saaksite vestleda oma tööruumidega igast seadmist.",
     setup: {
       step1: {
         title: "1. samm: Looge oma Telegrami bot",

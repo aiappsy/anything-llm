@@ -3,18 +3,18 @@ const TRANSLATIONS = {
   onboarding: {
     survey: {
       email: "E-posta adresiniz nedir?",
-      useCase: "AnythingLLM'yi ne için kullanacaksınız?",
+      useCase: "AiAppsy LLM'yi ne için kullanacaksınız?",
       useCaseWork: "İş için",
       useCasePersonal: "Kişisel kullanım için",
       useCaseOther: "Diğer",
-      comment: "AnythingLLM'yi nasıl duydunuz?",
+      comment: "AiAppsy LLM'yi nasıl duydunuz?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube vb. - Bizi nasıl buldunuz?",
       skip: "Anketi Atla",
       thankYou: "Geri bildiriminiz için teşekkür ederiz!",
-      title: "AnythingLLM'ye Hoş Geldiniz",
+      title: "AiAppsy LLM'ye Hoş Geldiniz",
       description:
-        "AnythingLLM'yi ihtiyaçlarınıza göre oluşturmamıza yardımcı olun. İsteğe bağlı.",
+        "AiAppsy LLM'yi ihtiyaçlarınıza göre oluşturmamıza yardımcı olun. İsteğe bağlı.",
     },
     home: {
       title: "Hoş Geldiniz",
@@ -23,7 +23,7 @@ const TRANSLATIONS = {
     llm: {
       title: "LLM Tercihi",
       description:
-        "AnythingLLM birçok LLM sağlayıcısıyla çalışabilir. Bu, sohbeti yöneten hizmet olacaktır.",
+        "AiAppsy LLM birçok LLM sağlayıcısıyla çalışabilir. Bu, sohbeti yöneten hizmet olacaktır.",
     },
     userSetup: {
       title: "Kullanıcı Kurulumu",
@@ -98,7 +98,7 @@ const TRANSLATIONS = {
     interface: "Arayüz Tercihleri",
     branding: "Marka & Beyaz Etiketleme",
     chat: "Sohbet",
-    "mobile-app": "AnythingLLM Mobil",
+    "mobile-app": "AiAppsy LLM Mobil",
     "community-hub": {
       title: "Topluluk Merkezi",
       trending: "Popüler olanları keşfedin",
@@ -155,7 +155,7 @@ const TRANSLATIONS = {
       add: "Yeni mesaj ekle",
       save: "Mesajları Kaydet",
       heading: "Bana açıkla",
-      body: "AnythingLLM'nin faydalarını",
+      body: "AiAppsy LLM'nin faydalarını",
     },
     delete: {
       title: "Çalışma Alanını Sil",
@@ -357,7 +357,7 @@ const TRANSLATIONS = {
         title: "Akıllı Becerilerin Seçimi",
         "beta-badge": "Beta",
         description:
-          'Her sorgu için sınırsız araç kullanımı ve "cut token" kullanımını %80\'e kadar azaltma imkanı sunar — AnythingLLM, her talep için doğru becerileri otomatik olarak seçer.',
+          'Her sorgu için sınırsız araç kullanımı ve "cut token" kullanımını %80\'e kadar azaltma imkanı sunar — AiAppsy LLM, her talep için doğru becerileri otomatik olarak seçer.',
         "max-tools": {
           title: "Max Araçları",
           description:
@@ -383,7 +383,7 @@ const TRANSLATIONS = {
   api: {
     title: "API Anahtarları",
     description:
-      "API anahtarları, bu AnythingLLM örneğine programatik olarak erişmeye ve yönetmeye olanak tanır.",
+      "API anahtarları, bu AiAppsy LLM örneğine programatik olarak erişmeye ve yönetmeye olanak tanır.",
     link: "API dokümantasyonunu okuyun",
     generate: "Yeni API Anahtarı Oluştur",
     table: {
@@ -395,7 +395,7 @@ const TRANSLATIONS = {
   llm: {
     title: "LLM Tercihi",
     description:
-      "Bu, tercih ettiğiniz LLM sohbet ve gömme sağlayıcısının kimlik bilgileri ile ayarlarıdır. Bu anahtarların güncel ve doğru olması önemlidir; aksi takdirde AnythingLLM doğru çalışmayacaktır.",
+      "Bu, tercih ettiğiniz LLM sohbet ve gömme sağlayıcısının kimlik bilgileri ile ayarlarıdır. Bu anahtarların güncel ve doğru olması önemlidir; aksi takdirde AiAppsy LLM doğru çalışmayacaktır.",
     provider: "LLM Sağlayıcısı",
     providers: {
       azure_openai: {
@@ -417,7 +417,7 @@ const TRANSLATIONS = {
       "Bu, tercih ettiğiniz transkripsiyon modeli sağlayıcısının kimlik bilgileri ve ayarlarıdır. Anahtarların güncel ve doğru olması önemlidir; aksi takdirde medya dosyaları ve sesler transkribe edilemez.",
     provider: "Transkripsiyon Sağlayıcısı",
     "warn-start":
-      "Sınırlı RAM veya CPU'ya sahip makinelerde yerel Whisper modelini kullanmak, medya dosyalarını işlerken AnythingLLM'nin duraksamasına neden olabilir.",
+      "Sınırlı RAM veya CPU'ya sahip makinelerde yerel Whisper modelini kullanmak, medya dosyalarını işlerken AiAppsy LLM'nin duraksamasına neden olabilir.",
     "warn-recommend":
       "En az 2GB RAM öneriyoruz ve 10MB üzerinde dosya yüklememeye dikkat edin.",
     "warn-end":
@@ -428,7 +428,7 @@ const TRANSLATIONS = {
     "desc-start":
       "Yerel olarak gömme mekanizmasını desteklemeyen bir LLM kullanıyorsanız, metinleri gömmek için ek kimlik bilgileri girmeniz gerekebilir.",
     "desc-end":
-      "Gömme, metni vektörlere dönüştürme sürecidir. Dosyalarınızın ve komutlarınızın işlenebilmesi için AnythingLLM, bu kimlik bilgilerine ihtiyaç duyar.",
+      "Gömme, metni vektörlere dönüştürme sürecidir. Dosyalarınızın ve komutlarınızın işlenebilmesi için AiAppsy LLM, bu kimlik bilgilerine ihtiyaç duyar.",
     provider: {
       title: "Embedding Sağlayıcısı",
     },
@@ -454,7 +454,7 @@ const TRANSLATIONS = {
   vector: {
     title: "Vektör Veritabanı",
     description:
-      "AnythingLLM örneğinizin nasıl çalışacağını belirleyen kimlik bilgileri ve ayarları burada bulunur. Bu anahtarların güncel ve doğru olması önemlidir.",
+      "AiAppsy LLM örneğinizin nasıl çalışacağını belirleyen kimlik bilgileri ve ayarları burada bulunur. Bu anahtarların güncel ve doğru olması önemlidir.",
     provider: {
       title: "Vektör Veritabanı Sağlayıcısı",
       description: "LanceDB için ek bir yapılandırma gerekmez.",
@@ -499,7 +499,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Gizlilik & Veri İşleme",
     description:
-      "Bağlantılı üçüncü taraf sağlayıcılarla ve AnythingLLM ile verilerinizin nasıl ele alındığını burada yapılandırabilirsiniz.",
+      "Bağlantılı üçüncü taraf sağlayıcılarla ve AiAppsy LLM ile verilerinizin nasıl ele alındığını burada yapılandırabilirsiniz.",
     anonymous: "Anonim Telemetri Etkin",
   },
   connectors: {
@@ -659,22 +659,22 @@ const TRANSLATIONS = {
       fetching: "Alınıyor...",
       "fetch-website": "Web sitesini al",
       "privacy-notice":
-        "Bu dosyalar, bu AnythingLLM örneğinde çalışan belge işleyiciye yüklenecektir. Bu dosyalar üçüncü taraflarla paylaşılmaz.",
+        "Bu dosyalar, bu AiAppsy LLM örneğinde çalışan belge işleyiciye yüklenecektir. Bu dosyalar üçüncü taraflarla paylaşılmaz.",
     },
     pinning: {
       what_pinning: "Belge sabitleme nedir?",
       pin_explained_block1:
-        "AnythingLLM'de bir belgeyi <b>sabitlediğinizde</b>, belgenin tüm içeriğini LLM'nin tam olarak anlaması için prompt pencerenize enjekte ederiz.",
+        "AiAppsy LLM'de bir belgeyi <b>sabitlediğinizde</b>, belgenin tüm içeriğini LLM'nin tam olarak anlaması için prompt pencerenize enjekte ederiz.",
       pin_explained_block2:
         "Bu, <b>büyük bağlam modelleri</b> veya bilgi tabanı için kritik olan küçük dosyalarla en iyi şekilde çalışır.",
       pin_explained_block3:
-        "AnythingLLM'den varsayılan olarak istediğiniz yanıtları alamıyorsanız, sabitleme tek tıklamayla daha yüksek kaliteli yanıtlar almanın harika bir yoludur.",
+        "AiAppsy LLM'den varsayılan olarak istediğiniz yanıtları alamıyorsanız, sabitleme tek tıklamayla daha yüksek kaliteli yanıtlar almanın harika bir yoludur.",
       accept: "Tamam, anladım",
     },
     watching: {
       what_watching: "Bir belgeyi izlemek ne yapar?",
       watch_explained_block1:
-        "AnythingLLM'de bir belgeyi <b>izlediğinizde</b>, belge içeriğinizi orijinal kaynağından düzenli aralıklarla <i>otomatik olarak</i> senkronize ederiz. Bu, dosyanın yönetildiği her çalışma alanında içeriği otomatik olarak günceller.",
+        "AiAppsy LLM'de bir belgeyi <b>izlediğinizde</b>, belge içeriğinizi orijinal kaynağından düzenli aralıklarla <i>otomatik olarak</i> senkronize ederiz. Bu, dosyanın yönetildiği her çalışma alanında içeriği otomatik olarak günceller.",
       watch_explained_block2:
         "Bu özellik şu anda yalnızca çevrimiçi tabanlı içeriği desteklemektedir ve manuel olarak yüklenen belgeler için kullanılamayacaktır.",
       watch_explained_block3_start: "Hangi belgelerin izlendiğini ",
@@ -797,16 +797,16 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "Arayüz Tercihleri",
-      description: "AnythingLLM için arayüz tercihlerinizi ayarlayın.",
+      description: "AiAppsy LLM için arayüz tercihlerinizi ayarlayın.",
     },
     branding: {
       title: "Marka & Beyaz Etiketleme",
       description:
-        "AnythingLLM örneğinizi özel markalamayla beyaz etiketleyin.",
+        "AiAppsy LLM örneğinizi özel markalamayla beyaz etiketleyin.",
     },
     chat: {
       title: "Sohbet",
-      description: "AnythingLLM için sohbet tercihlerinizi ayarlayın.",
+      description: "AiAppsy LLM için sohbet tercihlerinizi ayarlayın.",
       auto_submit: {
         title: "Konuşma Girişini Otomatik Gönder",
         description:
@@ -845,7 +845,7 @@ const TRANSLATIONS = {
       "display-language": {
         title: "Görüntüleme Dili",
         description:
-          "AnythingLLM'nin kullanıcı arayüzünü görüntülemek için tercih edilen dili seçin - çeviriler mevcut olduğunda.",
+          "AiAppsy LLM'nin kullanıcı arayüzünü görüntülemek için tercih edilen dili seçin - çeviriler mevcut olduğunda.",
       },
       logo: {
         title: "Marka Logosu",
@@ -987,7 +987,7 @@ const TRANSLATIONS = {
         unauthenticated: {
           title: "Kimlik Doğrulama Gerekli",
           description:
-            "Öğeleri yayınlamadan önce AnythingLLM Topluluk Hub'ına kimlik doğrulaması yapmanız gerekir.",
+            "Öğeleri yayınlamadan önce AiAppsy LLM Topluluk Hub'ına kimlik doğrulaması yapmanız gerekir.",
           button: "Topluluk Hub'ına Bağlan",
         },
       },
@@ -1011,7 +1011,7 @@ const TRANSLATIONS = {
     password: {
       title: "Şifre Koruması",
       description:
-        "AnythingLLM örneğinizi bir şifre ile koruyun. Bu şifreyi unutmanız hâlinde kurtarma yöntemi yoktur, bu yüzden mutlaka güvende saklayın.",
+        "AiAppsy LLM örneğinizi bir şifre ile koruyun. Bu şifreyi unutmanız hâlinde kurtarma yöntemi yoktur, bu yüzden mutlaka güvende saklayın.",
       "password-label": "Örnek şifresi",
     },
   },
@@ -1025,7 +1025,7 @@ const TRANSLATIONS = {
   telegram: {
     title: "Telegram Bot'u",
     description:
-      "AnythingLLM örneğinizi Telegram ile bağlantılandırarak, herhangi bir cihazdan çalışma alanlarınızla sohbet edebilmelisiniz.",
+      "AiAppsy LLM örneğinizi Telegram ile bağlantılandırarak, herhangi bir cihazdan çalışma alanlarınızla sohbet edebilmelisiniz.",
     setup: {
       step1: {
         title: "1. Adım: Telegram botunuzu oluşturun",
