@@ -7,11 +7,11 @@ import SystemPromptVariable from "./systemPromptVariable";
 
 const System = {
   cacheKeys: {
-    footerIcons: "anythingllm_footer_links",
-    supportEmail: "anythingllm_support_email",
-    customAppName: "anythingllm_custom_app_name",
-    canViewChatHistory: "anythingllm_can_view_chat_history",
-    deploymentVersion: "anythingllm_deployment_version",
+    footerIcons: "AiAppsy LLM_footer_links",
+    supportEmail: "AiAppsy LLM_support_email",
+    customAppName: "AiAppsy LLM_custom_app_name",
+    canViewChatHistory: "AiAppsy LLM_can_view_chat_history",
+    deploymentVersion: "AiAppsy LLM_deployment_version",
   },
   ping: async function () {
     return await fetch(`${API_BASE}/ping`)

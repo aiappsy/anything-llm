@@ -3,8 +3,8 @@ import { numberWithCommas } from "@/utils/numbers";
 import React, { useEffect, useState, useContext } from "react";
 import { isMobile } from "react-device-detect";
 const MetricsContext = React.createContext();
-const SHOW_METRICS_KEY = "anythingllm_show_chat_metrics";
-const SHOW_METRICS_EVENT = "anythingllm_show_metrics_change";
+const SHOW_METRICS_KEY = "AiAppsy LLM_show_chat_metrics";
+const SHOW_METRICS_EVENT = "AiAppsy LLM_show_metrics_change";
 
 /**
  * @param {number} duration - duration in milliseconds
@@ -36,7 +36,7 @@ function formatTps(outputTps) {
 }
 
 /**
- * Get the show metrics setting from localStorage `anythingllm_show_chat_metrics` key
+ * Get the show metrics setting from localStorage `AiAppsy LLM_show_chat_metrics` key
  * @returns {boolean}
  */
 function getAutoShowMetrics() {
@@ -64,7 +64,7 @@ function buildMetricsString(metrics = {}) {
 }
 
 /**
- * Toggle the show metrics setting in localStorage `anythingllm_show_chat_metrics` key
+ * Toggle the show metrics setting in localStorage `AiAppsy LLM_show_chat_metrics` key
  * @returns {void}
  */
 function toggleAutoShowMetrics() {

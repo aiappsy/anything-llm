@@ -81,7 +81,7 @@ class MetaGenerator {
       { tag: "meta", props: { property: "og:type", content: "website" } },
       {
         tag: "meta",
-        props: { property: "og:url", content: "https://AiAppsy LLM.com" },
+        props: { property: "og:url", content: "https://aiappsy-llm.com" },
       },
       {
         tag: "meta",
@@ -102,7 +102,7 @@ class MetaGenerator {
         props: {
           property: "og:image",
           content:
-            "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/images/promo.png",
+            "https://raw.githubusercontent.com/aiappsy/aiappsy-llm/master/images/promo.png",
         },
       },
 
@@ -113,7 +113,7 @@ class MetaGenerator {
       },
       {
         tag: "meta",
-        props: { property: "twitter:url", content: "https://AiAppsy LLM.com" },
+        props: { property: "twitter:url", content: "https://aiappsy-llm.com" },
       },
       {
         tag: "meta",
@@ -134,7 +134,7 @@ class MetaGenerator {
         props: {
           property: "twitter:image",
           content:
-            "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/images/promo.png",
+            "https://raw.githubusercontent.com/aiappsy/aiappsy-llm/master/images/promo.png",
         },
       },
 

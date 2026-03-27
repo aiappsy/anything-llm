@@ -261,8 +261,8 @@ export default function AdminAgents() {
           ...server,
           config: {
             ...server.config,
-            anythingllm: {
-              ...server.config?.anythingllm,
+            AiAppsy LLM: {
+              ...server.config?.AiAppsy LLM,
               suppressedTools,
             },
           },
@@ -276,8 +276,8 @@ export default function AdminAgents() {
         ...prev,
         config: {
           ...prev.config,
-          anythingllm: {
-            ...prev.config?.anythingllm,
+          AiAppsy LLM: {
+            ...prev.config?.AiAppsy LLM,
             suppressedTools,
           },
         },

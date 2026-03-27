@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Rebranding compatibility for STORAGE_DIR
+if [ -z "$STORAGE_DIR" ] && [ ! -z "$AIAPPSY_LLM_STORAGE_DIR" ]; then
+    export STORAGE_DIR="$AIAPPSY_LLM_STORAGE_DIR"
+fi
+
 # Check if STORAGE_DIR is set
 if [ -z "$STORAGE_DIR" ]; then
     echo "================================================================"
@@ -27,13 +32,19 @@ npx prisma generate --schema=./prisma/schema.prisma || { echo "❌ Prisma genera
 echo "📦 Running database migrations..."
 npx prisma migrate deploy --schema=./prisma/schema.prisma || { echo "❌ Prisma migrate failed!"; exit 1; }
 
+echo "🌱 Seeding database..."
+npx prisma db seed --schema=./prisma/schema.prisma || { echo "❌ Prisma seed failed!"; exit 1; }
+
 echo "✅ Database is ready."
 
 # Start both services and log their output
 echo "🛰️ Starting Backend and Collector..."
+echo "Starting AiAppsy LLM Server..."
 node /app/server/index.js &
+echo "Starting AiAppsy LLM Collector..."
 node /app/collector/index.js &
 
+echo "AiAppsy LLM services started. Waiting for processes..."
 # Wait for any process to exit
 wait -n
 

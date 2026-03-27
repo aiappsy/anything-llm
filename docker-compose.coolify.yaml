@@ -9,7 +9,7 @@ services:
     container_name: aiappsy-llm
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      dockerfile: Dockerfile
       args:
         ARG_UID: ${UID:-1000}
         ARG_GID: ${GID:-1000}
@@ -21,7 +21,14 @@ services:
       - "3001:3001"
     environment:
       - NODE_ENV=production
-      - STORAGE_DIR=/app/server/storage
+      - AIAPPSY_LLM_STORAGE_DIR=/app/server/storage
+      - AIAPPSY_LLM_RUNTIME=docker
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/local/bin/docker-healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
     networks:
       - aiappsy-llm
     extra_hosts:

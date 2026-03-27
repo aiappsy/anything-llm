@@ -2,6 +2,21 @@ process.env.NODE_ENV === "development"
   ? require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
   : require("dotenv").config();
 
+// Rebranding Compatibility Layer
+// Maps AIAPPSY_LLM_* prefixed environment variables to the standard names used throughout the codebase.
+const REBRAND_MAP = {
+  AIAPPSY_LLM_STORAGE_DIR: "STORAGE_DIR",
+  AIAPPSY_LLM_SERVER_PORT: "SERVER_PORT",
+  AIAPPSY_LLM_JWT_SECRET: "JWT_SECRET",
+  AIAPPSY_LLM_AUTH_TOKEN: "AUTH_TOKEN",
+};
+
+Object.entries(REBRAND_MAP).forEach(([prefixed, standard]) => {
+  if (process.env[prefixed] && !process.env[standard]) {
+    process.env[standard] = process.env[prefixed];
+  }
+});
+
 require("./utils/logger")();
 const express = require("express");
 const bodyParser = require("body-parser");
