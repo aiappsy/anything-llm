@@ -39,9 +39,9 @@ echo "✅ Database is ready."
 
 # Start both services and log their output
 echo "🛰️ Starting Backend and Collector..."
-echo "Starting AiAppsy LLM Server..."
+echo "Starting AiAppsy LLM Server on port ${SERVER_PORT:-3001}..."
 node /app/server/index.js &
-echo "Starting AiAppsy LLM Collector..."
+echo "Starting AiAppsy LLM Collector on port 8888..."
 node /app/collector/index.js &
 
 echo "AiAppsy LLM services started. Waiting for processes..."

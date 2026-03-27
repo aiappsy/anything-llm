@@ -169,6 +169,10 @@ ENV DEPLOYMENT_VERSION=1.0.0
 HEALTHCHECK --interval=1m --timeout=10s --start-period=1m \
   CMD /bin/bash /usr/local/bin/docker-healthcheck.sh || exit 1
 
+# Expose the ports for the server and collector
+EXPOSE 3001
+EXPOSE 8888
+
 # Run the server
 # CMD ["sh", "-c", "tail -f /dev/null"] # For development: keep container open
 ENTRYPOINT ["/bin/bash", "/usr/local/bin/docker-entrypoint.sh"]

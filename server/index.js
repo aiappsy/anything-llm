@@ -14,8 +14,16 @@ const REBRAND_MAP = {
 Object.entries(REBRAND_MAP).forEach(([prefixed, standard]) => {
   if (process.env[prefixed] && !process.env[standard]) {
     process.env[standard] = process.env[prefixed];
+    // Special case for PORT which many hostings use by default as a standard ENV
+    if (standard === "SERVER_PORT") process.env.PORT = process.env[prefixed];
   }
 });
+
+// Ensure PORT and SERVER_PORT are synchronized if one is set but not the other
+if (process.env.PORT && !process.env.SERVER_PORT)
+  process.env.SERVER_PORT = process.env.PORT;
+if (process.env.SERVER_PORT && !process.env.PORT)
+  process.env.PORT = process.env.SERVER_PORT;
 
 require("./utils/logger")();
 const express = require("express");
