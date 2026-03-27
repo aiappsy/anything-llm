@@ -21,7 +21,8 @@ services:
       - "3001:3001"
     environment:
       - NODE_ENV=production
-      - AIAPPSY_LLM_STORAGE_DIR=/app/server/storage
+      - STORAGE_DIR=/app/server/storage
+      - RUNTIME=docker
       - AIAPPSY_LLM_RUNTIME=docker
     healthcheck:
       test: ["CMD-SHELL", "/usr/local/bin/docker-healthcheck.sh"]

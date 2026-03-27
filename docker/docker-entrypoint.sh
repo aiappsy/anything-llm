@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Rebranding compatibility for STORAGE_DIR
-if [ -z "$STORAGE_DIR" ] && [ ! -z "$AIAPPSY_LLM_STORAGE_DIR" ]; then
-    export STORAGE_DIR="$AIAPPSY_LLM_STORAGE_DIR"
-fi
-
 # Check if STORAGE_DIR is set
 if [ -z "$STORAGE_DIR" ]; then
     echo "================================================================"

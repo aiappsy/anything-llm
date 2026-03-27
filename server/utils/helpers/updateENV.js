@@ -1332,14 +1332,6 @@ function dumpENV() {
 
     // Allow native tool calling for specific providers.
     "PROVIDER_SUPPORTS_NATIVE_TOOL_CALLING",
-
-    // Rebranded Keys
-    "AIAPPSY_LLM_STORAGE_DIR",
-    "AIAPPSY_LLM_SERVER_PORT",
-    "AIAPPSY_LLM_JWT_SECRET",
-    "AIAPPSY_LLM_AUTH_TOKEN",
-    "AIAPPSY_LLM_RUNTIME",
-    "AIAPPSY_LLM_CHROMIUM_ARGS",
   ];
 
   // Simple sanitization of each value to prevent ENV injection via newline or quote escaping.
